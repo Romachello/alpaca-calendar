@@ -1,2 +1,2 @@
 import '../js/calendar.js';
-import '../style/style.scss';
+import './style/style.scss';
