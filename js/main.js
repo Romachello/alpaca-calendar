@@ -1,1 +1,1 @@
-import './js/calendar.js';
+import '../js/calendar.js';

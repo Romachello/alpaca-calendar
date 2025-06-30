@@ -1,4 +1,4 @@
-import { getDaysInMonth, getFirstWeekday } from './dateUtils.js';
+import { getDaysInMonth, getFirstWeekday } from './dateUtils';
 
 const calendarGrid = document.querySelector('.calendar__grid');
 const monthLabel = document.querySelector('.calendar__month-label');
