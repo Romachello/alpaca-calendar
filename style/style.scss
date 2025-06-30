@@ -1,20 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-}
-
-// Utils
 @import 'utils/variables';
-@import 'utils/mixins';
-
-// Base
-@import 'base/reset';
-
-// Themes
 @import 'themes/light';
 @import 'themes/dark';
-
-// Blocks
 @import 'blocks/calendar';
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}

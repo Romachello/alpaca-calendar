@@ -1,7 +1,6 @@
 {
   "name": "alpaca-calendar",
   "version": "1.0.0",
-  "homepage": "https://romachello.github.io/alpaca-calendar",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
