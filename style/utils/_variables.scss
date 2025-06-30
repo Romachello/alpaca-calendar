@@ -1,0 +1,18 @@
+// Цвета
+$color-bg-light: #ffffff;
+$color-bg-dark: #1a1a1a;
+$color-text-light: #333333;
+$color-text-dark: #f5f5f5;
+$color-accent: #4A90E2;
+$color-range-light: rgba(74, 144, 226, 0.2);
+$color-range-dark: rgba(74, 144, 226, 0.3);
+
+// Размеры
+$calendar-width-min: 240px;
+$calendar-width-base: 320px;
+$calendar-width-max: 560px;
+$cell-size: calc((100% - 6 * 0.25rem) / 7);
+$cell-radius: 50%;
+$marker-size-single: 6px;
+$marker-size-range: 12px;
+$transition-time: 0.3s;

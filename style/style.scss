@@ -1,101 +1,20 @@
-:root {
-  --bg: #ffffff;
-  --text: #000000;
-  --accent: #ff92b2;
-  --selected-bg: #ffeaf1;
-  --in-range-bg: #fff3f7;
-}
-
-[data-theme="dark"] {
-  --bg: #1e1e1e;
-  --text: #ffffff;
-  --accent: #ff92b2;
-  --selected-bg: #332b30;
-  --in-range-bg: #3e3035;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 body {
-  margin: 0;
-  font-family: sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: var(--bg);
   color: var(--text);
 }
 
-.calendar {
-  width: clamp(240px, 100%, 560px);
-  margin: 0 auto;
-  padding: 1rem;
-  background: var(--bg);
-  border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+// Utils
+@import 'utils/variables';
+@import 'utils/mixins';
 
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
+// Base
+@import 'base/reset';
 
-  &__weekdays {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    text-align: center;
-    font-size: 14px;
-    margin-bottom: 0.5rem;
-  }
+// Themes
+@import 'themes/light';
+@import 'themes/dark';
 
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 0.25rem;
-  }
-
-  &__day {
-    aspect-ratio: 1/1;
-    text-align: center;
-    line-height: 1;
-    padding: 0.5em;
-    font-size: 14px;
-    position: relative;
-    border-radius: 50%;
-    transition: background 0.3s ease;
-
-    @media (hover: hover) and (pointer: fine) {
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.05);
-        cursor: pointer;
-      }
-    }
-
-    &--selected-single::after,
-    &--selected-start::after,
-    &--selected-end::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      margin: auto;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background-color: var(--accent);
-    }
-
-    &--selected-start,
-    &--selected-end {
-      background-color: var(--selected-bg);
-      &::after {
-        width: 12px;
-        height: 12px;
-      }
-    }
-
-    &--in-range {
-      background-color: var(--in-range-bg);
-      border-radius: 0;
-    }
-
-    &--other-month {
-      opacity: 0.4;
-    }
-  }
-}
+// Blocks
+@import 'blocks/calendar';
