@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Альпака календарь</title>
-    <script type="module" crossorigin src="/alpaca-calendar/assets/index-BPwCWIqf.js"></script>
-    <link rel="stylesheet" crossorigin href="/alpaca-calendar/assets/index-BqZ8uQJM.css">
-  </head>
-  <body>
-    <main class="main">
-      <section class="calendar-wrapper">
-        <div class="calendar calendar--empty">
-          <div class="calendar__header">
-            <h2 class="calendar__month">Март 2025</h2>
-            <button class="calendar__theme-toggle" aria-label="Сменить тему">🌗</button>
-          </div>
-          <div class="calendar__weekdays">
-            <div>Пн</div><div>Вт</div><div>Ср</div><div>Чт</div><div>Пт</div><div>Сб</div><div>Вс</div>
-          </div>
-          <div class="calendar__grid">
-            <div class="calendar__day">1</div>
-            <div class="calendar__day calendar__day--selected-start">5</div>
-            <div class="calendar__day calendar__day--in-range">6</div>
-            <div class="calendar__day calendar__day--selected-end">7</div>
-          </div>
-        </div>
-      </section>
-    </main>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Альпака календарь</title>
+  <link rel="stylesheet" href="/style/style.css">
+  <script type="module" crossorigin src="/alpaca-calendar/assets/index-DbSfHI03.js"></script>
+</head>
+<body>
+  <div class="calendar">
+    <div class="calendar__header">
+      <button class="calendar__nav calendar__nav--prev">&#8592;</button>
+      <div class="calendar__month-label"></div>
+      <button class="calendar__nav calendar__nav--next">&#8594;</button>
+    </div>
+
+    <div class="calendar__weekdays">
+      <div class="calendar__weekday">Пон</div>
+      <div class="calendar__weekday">Вт</div>
+      <div class="calendar__weekday">Ср</div>
+      <div class="calendar__weekday">Чт</div>
+      <div class="calendar__weekday">Пят</div>
+      <div class="calendar__weekday">Суб</div>
+      <div class="calendar__weekday">Вс</div>
+    </div>
+
+    <div class="calendar__grid"></div>
+  </div>
+
+</body>
 </html>
