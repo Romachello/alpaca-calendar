@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-@import 'utils/variables';
-@import 'themes/light';
-@import 'themes/dark';
-@import 'blocks/calendar';
+
+@import 'utils/-mixins.scss';
+@import 'utils/_variables.scss';
+@import 'base/_reset.scss';
+@import 'themes/_dark.scss';
+@import 'themes/_light.scss';
+@import 'blocks/_calendar.scss';
+
+
 
 body {
   font-family: 'Inter', sans-serif;

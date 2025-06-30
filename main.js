@@ -1,4 +1,5 @@
 import './style/style.scss';
+import './js/calendar.js';
 
 const grid = document.getElementById('calendar-grid');
 const daysInMonth = 30;
