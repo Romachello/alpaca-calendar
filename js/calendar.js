@@ -53,3 +53,6 @@ nextBtn.addEventListener('click', () => {
 });
 
 renderCalendar(currentDate);
+
+document.documentElement.setAttribute('data-theme', 'dark'); // или 'light'
+

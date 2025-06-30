@@ -9,23 +9,31 @@
 <body>
   <div class="calendar">
     <div class="calendar__header">
-      <button class="calendar__nav calendar__nav--prev">&#8592;</button>
-      <div class="calendar__month-label"></div>
-      <button class="calendar__nav calendar__nav--next">&#8594;</button>
+      <button class="calendar__nav calendar__nav--prev">←</button>
+      <div class="calendar__month">Июнь 2025</div>
+      <button class="calendar__nav calendar__nav--next">→</button>
     </div>
-
     <div class="calendar__weekdays">
-      <div class="calendar__weekday">Пон</div>
-      <div class="calendar__weekday">Вт</div>
-      <div class="calendar__weekday">Ср</div>
-      <div class="calendar__weekday">Чт</div>
-      <div class="calendar__weekday">Пят</div>
-      <div class="calendar__weekday">Суб</div>
-      <div class="calendar__weekday">Вс</div>
+      <div>Пн</div>
+      <div>Вт</div>
+      <div>Ср</div>
+      <div>Чт</div>
+      <div>Пт</div>
+      <div>Сб</div>
+      <div>Вс</div>
     </div>
-
-    <div class="calendar__grid"></div>
+    <div class="calendar__grid">
+      <!-- пример ячейки -->
+      <div class="calendar__day">1</div>
+      <div class="calendar__day calendar__day--selected-single">12</div>
+      <div class="calendar__day calendar__day--selected-start">14</div>
+      <div class="calendar__day calendar__day--in-range">15</div>
+      <div class="calendar__day calendar__day--in-range">16</div>
+      <div class="calendar__day calendar__day--selected-end">17</div>
+      <div class="calendar__day calendar__day--other-month">28</div>
+    </div>
   </div>
+  
 
   <script type="module" src="/js/calendar.js"></script>
 </body>
