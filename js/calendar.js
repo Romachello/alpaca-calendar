@@ -1,9 +1,9 @@
-import { getDaysInMonth, getFirstWeekday } from './dateUtils';
+import { getDaysInMonth, getFirstWeekday } from './dateUtils.js';
 
-const calendarGrid = document.querySelector('.calendar__grid');
-const monthLabel = document.querySelector('.calendar__month-label');
-const prevBtn = document.querySelector('.calendar__nav--prev');
-const nextBtn = document.querySelector('.calendar__nav--next');
+const calendarGrid = document.getElementById('calendar__grid');
+const monthLabel = document.querySelector('.calendar__month');
+const prevBtn = document.getElementById('prevMonth');
+const nextBtn = document.getElementById('nextMonth');
 
 let currentDate = new Date();
 
@@ -12,34 +12,34 @@ function renderCalendar(date) {
   const month = date.getMonth();
 
   const daysInMonth = getDaysInMonth(month, year);
-  const firstWeekday = getFirstWeekday(month, year);
+  const firstWeekday = getFirstWeekday(month, year) || 7;
 
-  // Get previous month's trailing days
   const prevMonth = new Date(year, month - 1);
   const daysInPrevMonth = getDaysInMonth(prevMonth.getMonth(), prevMonth.getFullYear());
 
   calendarGrid.innerHTML = '';
 
-  // Trailing days
-  for (let i = firstWeekday - 1; i >= 0; i--) {
+  // Предыдущий месяц
+  for (let i = firstWeekday - 2; i >= 0; i--) {
     const day = daysInPrevMonth - i;
     calendarGrid.innerHTML += `<div class="calendar__day calendar__day--other-month">${day}</div>`;
   }
 
-  // Current month days
+  // Текущий месяц
   for (let d = 1; d <= daysInMonth; d++) {
     calendarGrid.innerHTML += `<div class="calendar__day">${d}</div>`;
   }
 
-  // Next month placeholders (to fill 6 rows)
-  const totalDisplayed = firstWeekday + daysInMonth;
+  // Следующий месяц (чтобы было 42 ячейки = 6 недель)
+  const totalDisplayed = firstWeekday - 1 + daysInMonth;
   const nextDays = 42 - totalDisplayed;
 
   for (let d = 1; d <= nextDays; d++) {
     calendarGrid.innerHTML += `<div class="calendar__day calendar__day--other-month">${d}</div>`;
   }
 
-  monthLabel.textContent = date.toLocaleString('default', { month: 'long', year: 'numeric' });
+  // Название месяца
+  monthLabel.textContent = date.toLocaleString('ru-RU', { month: 'long', year: 'numeric' });
 }
 
 prevBtn.addEventListener('click', () => {
@@ -52,7 +52,7 @@ nextBtn.addEventListener('click', () => {
   renderCalendar(currentDate);
 });
 
-renderCalendar(currentDate);
-
-document.documentElement.setAttribute('data-theme', 'dark'); // или 'light'
-
+document.addEventListener('DOMContentLoaded', () => {
+  renderCalendar(currentDate);
+  document.documentElement.setAttribute('data-theme', 'dark'); 
+});

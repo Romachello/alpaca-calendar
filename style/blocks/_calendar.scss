@@ -1,7 +1,27 @@
 .calendar {
    width: clamp($calendar-width-min, 100%, $calendar-width-max);
    padding: 1rem;
-   background: var(--bg);
+   position: relative;
+   overflow: hidden;
+ 
+   &__background {
+     position: absolute;
+     inset: 0;
+     background-image: url('../../images/fon-calendar.png');
+     background-size: cover;
+     background-position: center;
+     opacity: .3;
+     z-index: 0;
+   }
+ 
+   &__header,
+   &__grid,
+   &__weekdays,
+   &__month-label,
+   &__day {
+     position: relative;
+     z-index: 1;
+   }
    color: var(--text);
    border-radius: 1rem;
    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -90,4 +110,10 @@
      }
    }
  }
- 
+    .calendar__day--selected {
+      background-color: var(--accent, #4A90E2);
+      color: #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--accent, #4A90E2);
+      border: 1px solid white;
+    }

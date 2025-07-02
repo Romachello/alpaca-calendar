@@ -1,23 +1,41 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alpaca Calendar</title>
-    <script type="module" crossorigin src="/alpaca-calendar/assets/index-CStdT96u.js"></script>
-    <link rel="stylesheet" crossorigin href="/alpaca-calendar/assets/index-Cnhbkbnf.css">
-  </head>
-  <body>
-    <div id="calendar" class="calendar calendar--empty">
-      <div class="calendar__header">
-        <button id="prevMonth">&lt;</button>
-        <span class="calendar__month">Июнь 2025</span>
-        <button id="nextMonth">&gt;</button>
-      </div>
-      <div class="calendar__weekdays">
-        <div>Пн</div><div>Вт</div><div>Ср</div><div>Чт</div><div>Пт</div><div>Сб</div><div>Вс</div>
-      </div>
-      <div class="calendar__grid" id="calendar-grid"></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alpaca Calendar</title>
+  <style>
+    .calendar__btn {
+      width: 32px;
+      height: 32px;
+      background-color: rgb(4, 6, 8);
+      color: white;
+    }
+  </style>
+  <script type="module" crossorigin src="/alpaca-calendar/assets/index-CxA7rac1.js"></script>
+  <link rel="stylesheet" crossorigin href="/alpaca-calendar/assets/index-B52jsE3_.css">
+</head>
+
+<body>
+  <div id="calendar" class="calendar calendar--empty">
+    <div class="calendar__background"></div>
+    <div class="calendar__header">
+      <button class="calendar__btn" id="prevMonth">&lt;</button>
+      <span class="calendar__month">Июнь 2025</span>
+      <button class="calendar__btn" id="nextMonth">&gt;</button>
     </div>
-  </body>
+    <div class="calendar__weekdays">
+      <div>Пн</div>
+      <div>Вт</div>
+      <div>Ср</div>
+      <div>Чт</div>
+      <div>Пт</div>
+      <div>Сб</div>
+      <div>Вс</div>
+    </div>
+    <div class="calendar__grid" id="calendar__grid"></div>
+  </div>
+</body>
+
 </html>
